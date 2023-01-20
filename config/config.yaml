@@ -1,0 +1,39 @@
+training_parameter:
+  input_col : ['price']
+  epoch : 35
+  ver_size : 6
+  cmp_size : 5
+  batch_size : 32
+
+  seq_len : 21
+
+  output_distance : 5
+
+  d_k : 128
+  d_v : 128
+
+  n_heads : 3
+  ff_dim : 16
+
+  label_dict : {'version':['1','2','3','4','5'] , 'company' : ['Apple','Samsung','Xiaomi','Lenovo'] }
+
+
+testing_parameter:
+  input_col : ['price']
+
+  ver_size : 6
+  cmp_size : 5
+  epoch : 35
+  batch_size : 32
+
+  seq_len : 21
+
+  output_distance : 5
+
+  d_k : 128
+  d_v : 128
+
+  n_heads : 3
+  ff_dim : 16
+
+  label_dict : {'version':['1','2','3','4','5'] , 'company' : ['Apple','Samsung','Xiaomi','Lenovo'] }
