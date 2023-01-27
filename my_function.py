@@ -92,7 +92,7 @@ class Prepare_InputOutput:
                 df_input_cat2 = tmp[self.cat_col[1]].values
                 df_output = tmp[self.output_col].values
 
-                for step in range(len(tmp)- input_output_length - 1):
+                for step in range(len(tmp)- input_output_length + 1):
                     input_price_data.append(df_input_pr[step : ws])
                     input_cat1_data.append(df_input_cat1[step : ws])
                     input_cat2_data.append(df_input_cat2[step : ws])
@@ -137,7 +137,7 @@ class Prepare_InputOutput:
 
         output_loc = input_output_length - 1
 
-        for step in tqdm(range(len(tmp)- input_output_length - 1 )):
+        for step in tqdm(range(len(tmp)- input_output_length + 1 )):
                     test_x_p.append(df_input_pr[step : window_size])
                     test_x_cat1.append(df_input_cat1[step : window_size])
                     test_x_cat2.append(df_input_cat2[step : window_size])
